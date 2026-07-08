@@ -29,6 +29,7 @@ def juego_play(
         print(f"\n--------> Ganas: {pts} puntos <--------")
         puntaje_total += pts
         print(f"\n******** Total: {puntaje_total} puntos ********")
+        input("\n([])")
 
 
 """

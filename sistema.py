@@ -7,16 +7,25 @@ comodin_disponibles = {
 }
 
 
+def arranque():
+    print("Iniciando el juego, por favor espere...")
+    print(
+        "\n \n \n Cada vez que veas este simbolo  ([])  significa que debes presionar enter para continuar"
+    )
+    input("\n([])")
+
+
 def menu():
     a = []
     print("""
 *****************************************************************
 *                 ¿CUANTO CONOCES A ALEJANDRO?                  *
 *****************************************************************          
-                1 = INICIAR |>
-                2 = PUNTAJES + + 
+                1 = INICIAR   >>>
+                2 = PUNTAJES  + -
                 3 = INSTRUCCIONES [] 
-                4 = MENSAJES <3
+                4 = MENSAJES  <3
+                5 = SALIR     <-[
     
     """)
     resp = input("¿Qué quieres hacer?----->")
@@ -24,6 +33,7 @@ def menu():
     if resp == "1":
         nombre_usuario = input("Nombre del jugador: ")
         a.append(nombre_usuario)
+        input("\n([])")
         return a
 
 
