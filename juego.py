@@ -37,7 +37,7 @@ def puntajes():
         puntajes = json.load(archivo)
     print("\n¿Quién conoce mejor a Alejandro?")
     for a, b in puntajes.items():
-        print(f"\n{a}: {b}")
+        print(f"\n{a}: {b[0]} puntos - Jugado el {b[1]}).")
     input("\n([])")
 
 
@@ -50,7 +50,7 @@ def instrucciones():
         1. El juego consta de 10 preguntas, dos de cada tipo.
         2. Cada pregunta tiene un puntaje diferente según la respuesta.
         3. Puedes usar comodines para ayudarte en las preguntas.
-        4. Al final del juego, tu puntaje será guardado en un archivo.
+        4. Al final del juego, tu puntaje será guardado.
         5. ¡Diviértete y buena suerte!
         -------------------------------------------------------
         """
@@ -63,5 +63,7 @@ def mensajes():
         mensajes = json.load(archivo)
     print("\nMensajes para Alejandro:")
     for a, b in mensajes.items():
-        print(f"\n{a}: {b}")
+        print(f"\n{b[0]}")
+        print(f"Atentamente: {a}")
+        print(f"(Puntaje: {b[1]}, Fecha: {b[2]})")
     input("\n([])")

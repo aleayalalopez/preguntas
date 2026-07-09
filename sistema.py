@@ -28,16 +28,23 @@ def menu():
                 2 = PUNTAJES  + -
                 3 = INSTRUCCIONES [] 
                 4 = MENSAJES  <3
-                5 = SALIR     <-[
+                5 = Apagar juego     <-[
     
     """)
     resp = input("¿Qué quieres hacer?----->")
     a.append(resp)
+    while resp not in ["1", "2", "3", "4", "5"]:
+        print("\n ERROR - Opción no válida. Intenta de nuevo.")
+        resp = input("¿Qué quieres hacer?----->")
+        a[0] = resp
     if resp == "1":
-        nombre_usuario = input("Nombre del jugador: ")
+        nombre_usuario = input("Elije un nombre: ")
         a.append(nombre_usuario)
         input("\n([])")
-        return a
+    elif resp in ["2", "3", "4"]:
+        pass
+
+    return a
 
 
 # respuesta, tipo de pregunta, puntajes
@@ -146,7 +153,8 @@ def resp(id_pregunta, tipo_pregunta):
 
 
 def finalizar_juego(usua_resp, puntaje_total):
-    gd.guarda_puntaje(usua_resp, puntaje_total)
+    fecha_jeugo = datetime.now().strftime("%d/%m/%Y")
+    gd.guarda_puntaje(usua_resp, puntaje_total, fecha_jeugo)
     print(
         f"\nGracias por jugar ~~ {usua_resp[1]} ~~\nTu puntaje final es: {puntaje_total}"
     )
