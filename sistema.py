@@ -50,6 +50,7 @@ def menu():
 # respuesta, tipo de pregunta, puntajes
 def validacion(rd, t, p):
     r = rd[0]
+    multiplicador = rd[1]
     puntaje = 0
     if r == "PS":
         return 2
@@ -106,9 +107,7 @@ def validacion(rd, t, p):
             puntaje = 1
         elif c == 3:
             puntaje = 4
-    if (
-        len(rd) > 1 and rd == 2
-    ):  # solo en caso que la respuesta contenga el comodín x2 (22)
+    if multiplicador == 2:  # si se usó el comodín de 22, se dobla el puntaje
         puntaje *= 2
     return puntaje
 
