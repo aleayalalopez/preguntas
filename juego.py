@@ -1,4 +1,4 @@
-# import json
+import json
 import sistema as ss
 from preguntas import lista_dic_preguntas
 
@@ -29,13 +29,16 @@ def juego_play(
         input("\n([])")
 
     ss.finalizar_juego(usua_resp, puntaje_total)
+    ss.escribir_mensaje(usua_resp[1], puntaje_total)
 
 
 def puntajes():
     with open("puntajes.json", "r") as archivo:
-        puntajes = archivo.read()
-        print(f"\n{puntajes}")
-        input("\n([])")
+        puntajes = json.load(archivo)
+    print("\n¿Quién conoce mejor a Alejandro?")
+    for a, b in puntajes.items():
+        print(f"\n{a}: {b}")
+    input("\n([])")
 
 
 def instrucciones():
@@ -56,26 +59,9 @@ def instrucciones():
 
 
 def mensajes():
-    pass
-
-
-"""
-
-info_usuario = {}
-
-
-# info_usuario.setdefault(nombre_usuario, puntaje)
-
-with open("puntajes.json", "r") as archivo:
-    puntajes = json.load(archivo)
-
-puntajes.update(info_usuario)
-
-with open("puntajes.json", "w") as jason_dic:
-    json.dump(puntajes, jason_dic)
-
-print(" ")
-for a, b in puntajes.items():
-    print(f"Usuario: {a}={b} puntos ")
-
-"""
+    with open("mensajes.json", "r") as archivo:
+        mensajes = json.load(archivo)
+    print("\nMensajes para Alejandro:")
+    for a, b in mensajes.items():
+        print(f"\n{a}: {b}")
+    input("\n([])")

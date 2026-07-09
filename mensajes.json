@@ -1,2 +1,7 @@
-{"vale:":"Gracias por tanto, te apoyo mil"}
-
+{
+    "Alejandro": [
+        "Hola, este es un mensaje de prueba.",
+        100,
+        "01/01/2024"
+    ]
+}

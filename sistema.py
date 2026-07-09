@@ -1,5 +1,7 @@
+from datetime import datetime
 import texto_comodin as tc
 import guardado as gd
+
 
 comodin_disponibles = {
     "50": "Elimina 2 alternativas incorrectas",
@@ -149,3 +151,13 @@ def finalizar_juego(usua_resp, puntaje_total):
         f"\nGracias por jugar ~~ {usua_resp[1]} ~~\nTu puntaje final es: {puntaje_total}"
     )
     input("\n([])")
+
+
+def escribir_mensaje(nombre_usuario, puntaje_total):
+    print("\nEscribe un mensaje para Alejandro:")
+    nombre = nombre_usuario
+    puntaje = puntaje_total
+    mensaje = input("\nQuerido Alejandro: ")
+    fecha_mensaje = datetime.now().strftime("%d/%m/%Y")
+    info_mensaje = {nombre: [mensaje, puntaje, fecha_mensaje]}
+    gd.guardar_mensaje(info_mensaje)

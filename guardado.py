@@ -18,4 +18,9 @@ def guarda_puntaje(usua_resp, puntaje_total):
         json.dump(datos_juego, archivo, indent=4)
 
 
-guarda_puntaje(("1", "javi"), 1000)
+def guardar_mensaje(info_mensaje):
+    with open("mensajes.json", "r") as archivo:
+        datos_mensajes = json.load(archivo)
+    datos_mensajes.update(info_mensaje)
+    with open("mensajes.json", "w") as archivo:
+        json.dump(datos_mensajes, archivo, indent=4)
