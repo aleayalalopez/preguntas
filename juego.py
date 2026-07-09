@@ -2,9 +2,6 @@
 import sistema as ss
 from preguntas import lista_dic_preguntas
 
-# list_dic_pre = tp.lista_dic_preguntas
-# p = list_dic_pre[2]
-
 
 # Bucle principal del juego. Son 10 preguntas, dos de cada tipo.
 def juego_play(
@@ -30,6 +27,36 @@ def juego_play(
         puntaje_total += pts
         print(f"\n******** Total: {puntaje_total} puntos ********")
         input("\n([])")
+
+    ss.finalizar_juego(usua_resp, puntaje_total)
+
+
+def puntajes():
+    with open("puntajes.json", "r") as archivo:
+        puntajes = archivo.read()
+        print(f"\n{puntajes}")
+        input("\n([])")
+
+
+def instrucciones():
+    print(
+        """
+        -------------------------------------------------------
+        INSTRUCCIONES DEL JUEGO
+        -------------------------------------------------------
+        1. El juego consta de 10 preguntas, dos de cada tipo.
+        2. Cada pregunta tiene un puntaje diferente según la respuesta.
+        3. Puedes usar comodines para ayudarte en las preguntas.
+        4. Al final del juego, tu puntaje será guardado en un archivo.
+        5. ¡Diviértete y buena suerte!
+        -------------------------------------------------------
+        """
+    )
+    input("\n([])")
+
+
+def mensajes():
+    pass
 
 
 """

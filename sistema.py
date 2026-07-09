@@ -1,4 +1,5 @@
 import texto_comodin as tc
+import guardado as gd
 
 comodin_disponibles = {
     "50": "Elimina 2 alternativas incorrectas",
@@ -64,13 +65,29 @@ def validacion(rd, t, p):
             puntaje = 1
         elif c == 3:
             puntaje = 4
-    elif t == "vf" or t == "cc":
+    elif t == "vf":
         c = 0
         if r[0] == p[0]:
             c += 1
         if r[1] == p[1]:
             c += 1
         if r[2] == p[2]:
+            c += 1
+        if c == 0:
+            puntaje = -2
+        elif c == 1:
+            puntaje = 0
+        elif c == 2:
+            puntaje = 1
+        elif c == 3:
+            puntaje = 4
+    elif t == "cc":
+        c = 0
+        if r[0] in p:
+            c += 1
+        if r[1] in p:
+            c += 1
+        if r[2] in p:
             c += 1
         if c == 0:
             puntaje = -2
@@ -110,9 +127,9 @@ def resp(id_pregunta, tipo_pregunta):
             if resp_i == "22":
                 data_retorno[1] = 2
         else:
-            if tipo_pregunta == "sm" and resp_i in ["1", "2", "3", "4"]:
+            if tipo_pregunta == "sm" and resp_i in [str(n) for n in range(1, 11)]:
                 respuesta_ok = True
-            elif tipo_pregunta == "rg" and resp_i in [str(n) for n in range(1, 11)]:
+            elif tipo_pregunta == "rg" and resp_i in "ABCDEFGHIJ":
                 respuesta_ok = True
             elif tipo_pregunta == "uc" and len(resp_i) == 8:
                 respuesta_ok = True
@@ -124,3 +141,11 @@ def resp(id_pregunta, tipo_pregunta):
                 )
     data_retorno[0] = resp_i
     return data_retorno
+
+
+def finalizar_juego(usua_resp, puntaje_total):
+    gd.guarda_puntaje(usua_resp, puntaje_total)
+    print(
+        f"\nGracias por jugar ~~ {usua_resp[1]} ~~\nTu puntaje final es: {puntaje_total}"
+    )
+    input("\n([])")

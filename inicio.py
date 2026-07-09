@@ -7,6 +7,16 @@ import juego as j
 ss.arranque()
 print(tx.tx0)
 input("\n***** ([]) ****")
-usua_resp = ss.menu()
-if usua_resp[0] == "1":
-    j.juego_play(usua_resp)
+encenddio = True
+while encenddio:
+    usua_resp = ss.menu()
+    if usua_resp[0] == "1":
+        j.juego_play(usua_resp)
+    elif usua_resp[0] == "2":
+        j.puntajes()
+    elif usua_resp[0] == "3":
+        j.instrucciones()
+    elif usua_resp[0] == "4":
+        j.mensajes()
+    else:
+        encenddio = False
