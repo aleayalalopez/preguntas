@@ -135,9 +135,9 @@ def resp(id_pregunta, tipo_pregunta):
             if resp_i == "22":
                 data_retorno[1] = 2
         else:
-            if tipo_pregunta == "sm" and resp_i in [str(n) for n in range(1, 11)]:
+            if tipo_pregunta == "sm" and resp_i in [str(n) for n in range(1, 5)]:
                 respuesta_ok = True
-            elif tipo_pregunta == "rg" and resp_i in "ABCDEFGHIJ":
+            elif tipo_pregunta == "rg" and resp_i in [str(n) for n in range(1, 11)]:
                 respuesta_ok = True
             elif tipo_pregunta == "uc" and len(resp_i) == 8:
                 respuesta_ok = True
