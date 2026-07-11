@@ -22,12 +22,6 @@ lista_dic_preguntas = [
     {10: [tp.tx10, tip[4], ("A", "H", "I")]},
 ]
 
-def obtener_pregunta(id_pregunta):
-    for dic in lista_dic_preguntas:
-        if id_pregunta in dic:
-            return dic[id_pregunta]
-    return None
-
 if __name__ == "__main__":
     pregunta_data = lista_dic_preguntas[0][1]
     print(pregunta_data)
