@@ -10,9 +10,9 @@ tip = ("sm", "rg", "uc", "vf", "cc")
 
 # diccionarios {N° de las pregguntas: [texto de las preguntas,tipo de pregunta,puntaje según la respuesta]}
 lista_dic_preguntas = [
-    {1: [tp.tx1, tip[0], ("null", 4, 0, -2, 1)]},
+    {1: [tp.tx1, tip[0], ("null", 4, 0, -2, 2)]},
     {2: [tp.tx2, tip[1], ("null", -2, 0, 1, 2, 4, 2, 1, 0, -2, -2)]},
-    {3: [tp.tx3, tip[2], ("A1","B4","C3")]},
+    {3: [tp.tx3, tip[2], ("A1", "B4", "C3")]},
     {4: [tp.tx4, tip[3], ("V", "F", "F")]},
     {5: [tp.tx5, tip[4], ("B", "D", "J")]},
     {6: [tp.tx6, tip[0], ("null", 0, 4, 1, -2)]},

@@ -9,6 +9,8 @@ UNO
 	2 : Todas las carnes 
 	3 : No me gusta la pizza
 	4 : Me gustan todas las pizzas
+
+Ale dice >>> 4 pts: respuesta correcta, 2 pts segunda mejor opción, 0 pts la equivocada y -2 pts la peor.
 """
 tx2 = """
 DOS
@@ -19,6 +21,8 @@ DOS
 en un fin de semana, hacer traking subiendo un cerro?"
 
 -->El 1 significa, "es lo pero del mundo" y el "10", "Es lo mejor del mundo"
+
+Ale dice >>> 4 pts: respuesta exacta, 2 pts si te acercas, 0 pts si te equivocas y -2 pts si me ofendes.
 """
 tx3 = """
 TRES
@@ -26,7 +30,7 @@ TRES
 			Une los conceptos
 ----------------------------------------------------------
 Escribe las parejas de conceptos según el criterio del Ale
-ejemplo: D7,E9,F8
+Ejemplo: D7,E9,F8
 						
     			(A : Queque) (B : Completo) (C : Choripan)				
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -39,7 +43,8 @@ CUATRO
 						Verdadero o falso
 -----------------------------------------------------------------
 Escribe V o F en el orden de las afirmaciones, pensando siempre
-en la percepción del Ale
+en la percepción del Ale.
+Ejemplo: VFV
 
 		-Mi color favorito es el ROJO.
         -Un buen vino es lo mejor para acompañar un almuerzo.
@@ -51,7 +56,7 @@ CINCO
 -------------------------------------------------------------------
 					Clasifica los conceptos
 --------------------------------------------------------------------
-Distigue cuales de las siguientes canciones NO están en la playlis musical 
+Distigue las TRES canciones que NO están en la playlis musical 
 del ALe: 
 
         A : Another One Bites the Dust (Queen/1980)
@@ -73,10 +78,12 @@ SEIS
 -------------------------------------------------------
 ¿Cuál de las siguientes peliculas, no es Amada por el ALE?
 
-		1 : El retorno del rey (2023)
+		1 : El señor de los anillos - El retorno del rey (2003)
 		2 : Avengers infinity war 2 (2019)
 		3 : Un lugar llamado Notting Hill (1999)
 		4 : Porco Rosso (1992)
+
+Ale dice >>> 4 pts: respuesta correcta, 2 pts segunda mejor opción, 0 pts la equivocada y -2 pnts la peor.
 """
 tx7 = """
 SIETE
@@ -89,6 +96,7 @@ a la feria, al supermercado o a un mall?
 
 -->El 1 significa, "es lo pero del mundo" y el "10", "Es lo mejor del mundo"
 
+Ale dice >>> 4 pts: respuesta exacta, 2 pts si te acercas, 0 pts si te equivocas y -2 pts si me ofendes.
 """
 
 tx8 = """
@@ -111,7 +119,8 @@ NUEVE
 						Verdadero o falso
 -----------------------------------------------------------------
 Escribe V o F en el orden de las afirmaciones, pensando siempre
-en la percepción del Ale
+en la percepción del Ale.
+Ejemplo: VFV
 
 		-Mi serie de animación favorita es Hora de Aventura.
         -Mi serie de acción real favorita es The Wire.
@@ -123,8 +132,8 @@ DIEZ
 -------------------------------------------------------------------
 					Clasifica los conceptos
 --------------------------------------------------------------------
-Distigue cuales de las siguientes libors de ficción NO está, ni estará 
-jamás, en la biblioteca del Ale. 
+Distigue los TRES libros de ficción que NO están, ni estará jamás, en 
+la biblioteca del Ale. 
 
         A : Crepúsculo (Stephenie Meyer/2005)
         B : Amar en tiempo de colera (G.G Márquez/1985)

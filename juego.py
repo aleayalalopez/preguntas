@@ -35,9 +35,11 @@ def juego_play(
 def puntajes():
     with open("puntajes.json", "r") as archivo:
         puntajes = json.load(archivo)
-    print("\n¿Quién conoce mejor a Alejandro?")
+    print("\n::::::::::¿Quién conoce mejor a Alejandro?:::::::::::")
+    print("\nPuntajes máximos:")
     for a, b in puntajes.items():
         print(f"\n{a}: {b[0]} puntos - Jugado el {b[1]}).")
+    print("\n---------------------------------------------")
     input("\n([])")
 
 
@@ -61,9 +63,10 @@ def instrucciones():
 def mensajes():
     with open("mensajes.json", "r") as archivo:
         mensajes = json.load(archivo)
-    print("\nMensajes para Alejandro:")
+    print("\n::::::::::Mensajes para Alejandro:::::::::::")
     for a, b in mensajes.items():
         print(f"\n{b[0]}")
-        print(f"Atentamente: {a}")
+        print(f"---------->Atentamente: {a}")
         print(f"(Puntaje: {b[1]}, Fecha: {b[2]})")
+        print("\n---------------------------------------------")
     input("\n([])")
