@@ -3,7 +3,7 @@ UNO
 -------------------------------------------------------
 				Selección Múltiple
 --------------------------------------------------------
-¿Cuál es la pizza favorita del Alejandro?
+¿Cuál es la pizza favorita del Ale?
 
 	1 : Pepperoni
 	2 : Todas las carnes 
